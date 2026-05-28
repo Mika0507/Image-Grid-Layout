@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 80%;
+  height: 100vh;
+  margin: 1rem auto;
+}
+/* El problema principal para el efecto Pinterest con grid. Con filas de altura fija (1fr) todas las imágenes acaban igual de altas, perdiendo el efecto de columnas con alturas variables.
+La solución es usar columns de CSS, que es la forma más compatible hoy: */
+
+.image-grid {
+  columns: 3;
+  column-gap: 10px;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  display: block; /* elimina el espacio inferior inline */
+  margin-bottom: 10px;
+  object-fit: cover;
+  break-inside: avoid; /* evita que una imagen se parta entre columnas */
+}
