@@ -25,3 +25,90 @@ img {
   object-fit: cover;
   break-inside: avoid; /* evita que una imagen se parta entre columnas */
 }
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.description {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 200px;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.description2 {
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 200px;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.description3 {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 200px;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+li {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: #eee;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+li:hover .description {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0);
+  top: 100%;
+  left: 0%;
+}
+
+.li2:hover .description2 {
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(360deg);
+  top: 100%;
+  left: 0%;
+}
+.li3:hover .description3 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.05);
+  top: 100%;
+  left: 0%;
+}
